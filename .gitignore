@@ -1,0 +1,3 @@
+# Project exclude paths
+/rate-limit/target/
+/routing-service/target/
