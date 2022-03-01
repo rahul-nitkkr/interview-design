@@ -6,8 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="routing-service" />
         <module name="rate-limit" />
+        <module name="iterators" />
+        <module name="routing-service" />
+        <module name="connect-4" />
+        <module name="file-loader" />
       </profile>
     </annotationProcessing>
   </component>
