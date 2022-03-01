@@ -35,6 +35,28 @@ class BuySell:
             return product
 
         return backtrack(source, {source})
+    
+    
+def bellman_ford(start, end, graph):
+    paths = dict()
+    edges = set()
+    for key in graph:
+        paths[key] = float('inf')
+        for item in graph[key]:
+            paths[item] = float('inf')
+            edges.add((key, item))
+
+    paths[start] = 0
+    n = len(paths)
+    print(edges)
+    i = 0
+    while i < n:
+        for edge in edges:
+            src, tgt = edge[0], edge[1]
+            paths[tgt] = min(paths[tgt], graph[src][tgt] + paths[src])
+        i += 1
+    print(paths)
+    return paths[end]
 
 
 if __name__ == "__main__":
